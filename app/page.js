@@ -15,8 +15,8 @@ export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <div className="bg-white">
-    <h1>Max's Portfolio</h1>
+    <div className="flex items-center container mx:auto bg-black">
+    <h1 className="text-8xl">Hi, I'm Max. 😄</h1>
     </div>
   )
 }
