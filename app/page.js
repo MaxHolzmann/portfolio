@@ -15,7 +15,7 @@ export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <div className="flex items-center container mx:auto bg-black">
+    <div className="flex justify-center text-center bg-black">
     <h1 className="text-8xl">Hi, I'm Max. 😄</h1>
     </div>
   )
