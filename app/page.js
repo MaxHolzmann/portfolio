@@ -1,8 +1,13 @@
 "use client";
-
 import { useState, useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function Home() {
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   const [scrollPosition, setScrollPosition] = useState(0);
 
   useEffect(() => {
@@ -19,8 +24,8 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
-    const maxScrollHeight = 1000; // Adjust this value as needed
-    const minBlueValue = 100; // Adjust this value as needed
+    const maxScrollHeight = 2000; // Adjust this value as needed
+    const minBlueValue = 120; // Adjust this value as needed
 
     const calculateBlueValue = () => {
       const percentScrolled = scrollPosition / maxScrollHeight;
@@ -38,11 +43,25 @@ export default function Home() {
   return (
     <div>
       <main>
-        <div className='flex flex-col items-center justify-center gap-2 p-10'>
-          <h1 className='text-8xl'>Hi, I'm Max. 😄</h1>
-          <h2 className='text-3xl'>This is placeholder text.</h2>
+        <div className='flex flex-col items-center justify-center gap-2 p-12'>
+          <h1 data-aos='fade-right' className='text-8xl'>
+            Hi, I'm Max. 😄
+          </h1>
+          <h2 data-aos='fade-left' className='p-5 text-3xl'>
+            I am a Full Stack Web Developer based out of Fond du Lac, Wisconsin.
+          </h2>
         </div>
       </main>
+
+      <div className='flex flex-col items-center justify-center gap-2 p-12'>
+        <h1
+          data-aos='fade-up'
+          data-aos-anchor-placement='top-center'
+          className='text-8xl'
+        >
+          This is test text.
+        </h1>
+      </div>
     </div>
   );
 }
