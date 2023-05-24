@@ -40,13 +40,19 @@ export default function Home() {
     document.body.style.backgroundColor = backgroundColor;
   }, [scrollPosition]);
 
+/* 
+TODO: 
+Add divs for each text block to handle padding / margin between each instead of applying margin to each text item
+*/
+
+
   return (
     <>
       <main>
         <div className='flex items-center justify-center gap-2 p-12 xsm: flex-col sm:flex-col lg:flex-row'>
           <img
             data-aos='fade-right'
-            className='h-48 w-96 object-scale-down'
+            className='border-solid border-2 border-sky-500 h-48 w-96 object-scale-down'
             src='/profile-pic.png'
           ></img>
 
@@ -68,7 +74,7 @@ export default function Home() {
           data-aos-anchor-placement='top-center'
           className='text-8xl text-center'
         >
-          Passion, Purpose
+          Passion
         </h1>
 
         <h2 data-aos='fade-up' data-aos-anchor-placement='top-center' className='py-10 text-4xl text-center'>
@@ -80,16 +86,27 @@ export default function Home() {
           data-aos-anchor-placement='top-center'
           className='text-8xl text-center py-20'
         >
-          This is test text.
+          Purpose
         </h1>
+
+        <h2 data-aos='fade-up' data-aos-anchor-placement='top-center' className='text-4xl text-center'>
+        Blah blah blah
+          </h2>
+
+
 
         <h1
           data-aos='fade-up'
           data-aos-anchor-placement='top-center'
-          className='text-8xl text-center'
+          className='py-20 text-8xl text-center'
         >
-          This is test text.
+          Projects
         </h1>
+
+        <h2 data-aos='fade-up' data-aos-anchor-placement='top-center' className='py-10 text-4xl text-center'>
+        Blah blah blah
+          </h2>
+
       </div>
     </>
   );
