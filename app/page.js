@@ -46,7 +46,7 @@ export default function Home() {
         <div className='flex items-center justify-center gap-2 p-12 sm:flex-col lg:flex-row'>
           <img
             data-aos='fade-right'
-            class='h-48 w-96 object-scale-down'
+            className='h-48 w-96 object-scale-down'
             src='/profile-pic.png'
           ></img>
 
