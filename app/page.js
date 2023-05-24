@@ -68,13 +68,17 @@ export default function Home() {
           data-aos-anchor-placement='top-center'
           className='text-8xl text-center'
         >
-          This is test text.
+          Passion, Purpose
         </h1>
+
+        <h2 data-aos='fade-up' data-aos-anchor-placement='top-center' className='py-10 text-4xl text-center'>
+        Blah blah blah
+          </h2>
 
         <h1
           data-aos='fade-up'
           data-aos-anchor-placement='top-center'
-          className='text-8xl text-center'
+          className='text-8xl text-center py-20'
         >
           This is test text.
         </h1>

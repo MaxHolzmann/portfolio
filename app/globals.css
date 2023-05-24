@@ -17,7 +17,7 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
-  min-height: 200vh;
+  min-height: 250vh;
   color: white;
 }
 
