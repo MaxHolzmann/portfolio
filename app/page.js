@@ -4,6 +4,8 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 export default function Home() {
+
+  //Initiates AOS for Scrolling animations
   useEffect(() => {
     AOS.init();
   }, []);
@@ -43,6 +45,10 @@ export default function Home() {
 /* 
 TODO: 
 Add divs for each text block to handle padding / margin between each instead of applying margin to each text item
+Fix border on profile image 
+Change profile image
+Change background
+Potentially change opacity of scroll and change background
 */
 
 
