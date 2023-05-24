@@ -41,13 +41,22 @@ export default function Home() {
   }, [scrollPosition]);
 
   return (
-    <div>
+    <>
       <main>
-        <div className='flex flex-col items-center justify-center gap-2 p-12'>
-          <h1 data-aos='fade-right' className='text-8xl'>
-            Hi, I'm Max. 😄
+        <div className='flex items-center justify-center gap-2 p-12 sm:flex-col lg:flex-row'>
+          <img
+            data-aos='fade-right'
+            class='h-48 w-96 object-scale-down'
+            src='/profile-pic.png'
+          ></img>
+
+          <h1 data-aos='fade-left' className='text-8xl'>
+            Hi, Im Max.
           </h1>
-          <h2 data-aos='fade-left' className='p-5 text-3xl'>
+        </div>
+
+        <div className='flex flex-col items-center justify-center gap-2 p-4'>
+          <h2 data-aos='fade-up' className='p-5 text-4xl'>
             I am a Full Stack Web Developer based out of Fond du Lac, Wisconsin.
           </h2>
         </div>
@@ -61,7 +70,23 @@ export default function Home() {
         >
           This is test text.
         </h1>
+
+        <h1
+          data-aos='fade-up'
+          data-aos-anchor-placement='top-center'
+          className='text-8xl'
+        >
+          This is test text.
+        </h1>
+
+        <h1
+          data-aos='fade-up'
+          data-aos-anchor-placement='top-center'
+          className='text-8xl'
+        >
+          This is test text.
+        </h1>
       </div>
-    </div>
+    </>
   );
 }
