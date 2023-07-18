@@ -26,7 +26,7 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
-    const maxScrollHeight = 2000; // Adjust this value as needed
+    const maxScrollHeight = 3500; // Adjust this value as needed
     const minBlueValue = 120; // Adjust this value as needed
 
     const calculateBlueValue = () => {
@@ -69,7 +69,7 @@ Potentially change opacity of scroll and change background
         <div className='flex items-center justify-center gap-2 p-12 xsm: flex-col sm:flex-col lg:flex-row'>
           <img
             data-aos='fade-right'
-            className='border-solid border-2 border-sky-500 h-48 w-96 object-scale-down'
+            className='h-48 w-96 object-scale-down'
             src='/profile-pic.png'
           ></img>
 
