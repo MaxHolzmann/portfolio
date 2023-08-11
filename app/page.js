@@ -25,31 +25,15 @@ export default function Home() {
     };
   }, []);
 
-  useEffect(() => {
-    const maxScrollHeight = 3500; // Adjust this value as needed
-    const minBlueValue = 120; // Adjust this value as needed
-
-    const calculateBlueValue = () => {
-      const percentScrolled = scrollPosition / maxScrollHeight;
-      const blueValue = Math.round(
-        percentScrolled * (255 - minBlueValue) + minBlueValue
-      );
-      return blueValue;
-    };
-
-    const blueValue = calculateBlueValue();
-    const backgroundColor = `rgb(${blueValue}, ${blueValue}, 255)`;
-    document.body.style.backgroundColor = backgroundColor;
-  }, [scrollPosition]);
-
 
   const allText = {
-   "headerText": "Hi, I'm Max",
-   "headerDescription": "I am a Full Stack Web Developer based out of Fond du Lac, Wisconsin.",
+   "headerText": "Hi, I'm Maximilian",
+   "headerName": "Maximilian",
+   "headerDescription": "Full Stack Web Developer",
    "sectionOneHeader": "Passion",
    "sectionOneText": "I pour my passion into every aspect of developing websites. From the initial concept to the final launch, I infuse my work with enthusiasm and dedication. With meticulous attention to detail, I craft visually captivating designs and seamless functionalities that engage and delight users.",
-   "sectionTwoHeader": "Purpose",
-   "sectionTwoText": "As a purpose-driven web developer, I am fueled by a deep commitment to building websites that serve a meaningful mission. Every line of code I write is guided by a clear purpose and a desire to make a positive impact.  I invest time in understanding the needs of my clients or users, ensuring that the websites I create are tailored to their goals and aspirations.",
+   "sectionTwoHeader": "Experience",
+   "sectionTwoText": "Write about my experience here",
    "sectionThreeHeader": "Projects",
    "sectionThreeText": "Showcasing projects",
   }
@@ -64,28 +48,28 @@ Potentially change opacity of scroll and change background
 
 
   return (
-    <>
-      <main>
-        <div className='flex items-center justify-center gap-2 p-12 xsm: flex-col sm:flex-col lg:flex-row'>
+    <div>
+      <main className="flex flex-col items-center">
+        <div data-aos='fade-down' className='w-3/4 flex items-center justify-center gap-2 p-16 my-5 rounded-xl shadow-xl xsm: bg-slate-300 flex-col sm:flex-col lg:flex-row'>
           <img
             data-aos='fade-right'
-            className='h-48 w-96 object-scale-down'
+            className='h-64'
             src='/profile-pic.png'
           ></img>
 
-          <h1 data-aos='fade-left' className='text-8xl text-center'>
+          <h1 data-aos='fade-left' className='lg:text-8xl text-center text-6xl sm:mt-10 lg:mt-0 text-white'>
            {allText.headerText}
           </h1>
         </div>
 
-        <div className='flex flex-col items-center justify-center gap-2 p-4'>
-          <h2 data-aos='fade-up' className='p-5 text-4xl text-center'>
-            {allText.headerDescription}
-          </h2>
+        <div className='flex flex-col items-center justify-center gap-2 p-10 mx-40  my-2'
+        data-aos='fade-up'>
+          <h2 class="animate-text text-center bg-gradient-to-r from-teal-500 via-purple-500 to-orange-500 bg-clip-text text-transparent text-7xl font-semibold">{allText.headerDescription}</h2>
+
         </div>
       </main>
 
-      <div className='flex flex-col items-center justify-center gap-2 p-12'>
+      <div className='bg-white flex flex-col items-center justify-center gap-2 p-12'>
         <h1
           data-aos='fade-up'
           data-aos-anchor-placement='top-center'
@@ -125,6 +109,6 @@ Potentially change opacity of scroll and change background
           </h2>
 
       </div>
-    </>
+    </div>
   );
 }
