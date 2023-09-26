@@ -2,12 +2,38 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+body {
+  min-height: 400vh;
 }
 
+@media screen and (min-width: 640px) {
+  body {
+    min-height:400vh;
+  }
+}
 
-body {
-  background-color: #fff;
+@media screen and (min-width: 768px) {
+  body {
+    min-height:300vh;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    min-height:300vh;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  body {
+    min-height:300vh;
+  }
+}
+
+@media screen and (min-width: 1536px) {
+  body {
+    min-height:300vh;
+  }
 }
 
 
