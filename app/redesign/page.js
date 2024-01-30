@@ -20,7 +20,8 @@ export default function Home() {
 
   return (
     <>
-      <header className='flex h-screen flex-col place-items-center bg-gradient-to-b from-orange-400'>
+    <body className="flex h-screen flex-col place-items-center bg-gradient-to-b from-orange-400 text-center">
+      <header className="flex-col place-items-center justify-center">
         <h1 className='mt-10 text-center text-7xl font-bold text-white'>
           {allText.headerText}
         </h1>
@@ -32,6 +33,8 @@ export default function Home() {
       <section>
         <h1>About Me</h1>
       </section>
+
+    </body>
     </>
   );
 }
