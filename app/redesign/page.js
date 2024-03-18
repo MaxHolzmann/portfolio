@@ -70,21 +70,21 @@ export default function Home() {
         <Project
           title='test'
           description='test'
-          image='test'
+          image='/blueberries.jpg'
           deployment='test.com'
           github='test.com'
         ></Project>
         <Project
           title='test'
           description='test'
-          image='test'
+          image='/blueberries.jpg'
           deployment='test.com'
           github='test.com'
         ></Project>
         <Project
           title='test'
           description='test'
-          image='test'
+          image='/blueberries.jpg'
           deployment='test.com'
           github='test.com'
         ></Project>
