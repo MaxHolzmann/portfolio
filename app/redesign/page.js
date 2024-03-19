@@ -26,6 +26,7 @@ export default function Home() {
 
   return (
     <>
+    {/* fix this on small / phone screens */}
       <header className='flex h-screen flex-col place-items-center justify-center bg-gradient-to-b from-orange-400 pb-96 text-center sm:p-10'>
         <h1 className='mt-10 text-center text-6xl font-bold text-white drop-shadow-lg md:text-9xl'>
           {allText.headerText}
@@ -68,22 +69,22 @@ export default function Home() {
       <section className='flex flex-col place-items-center justify-center  bg-gradient-to-b from-white to-slate-600 text-center'>
         <h1>Projects</h1>
         <Project
-          title='test'
-          description='test'
+          title='The Title'
+          description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ultrices dui sapien eget mi proin sed libero enim. Cursus mattis molestie a iaculis at. Vel pretium lectus quam id leo in.'
           image='/blueberries.jpg'
           deployment='test.com'
           github='test.com'
         ></Project>
         <Project
-          title='test'
-          description='test'
+          title='The Title'
+          description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ultrices dui sapien eget mi proin sed libero enim. Cursus mattis molestie a iaculis at. Vel pretium lectus quam id leo in.'
           image='/blueberries.jpg'
           deployment='test.com'
           github='test.com'
         ></Project>
         <Project
-          title='test'
-          description='test'
+          title='The Title'
+          description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ultrices dui sapien eget mi proin sed libero enim. Cursus mattis molestie a iaculis at. Vel pretium lectus quam id leo in.'
           image='/blueberries.jpg'
           deployment='test.com'
           github='test.com'
