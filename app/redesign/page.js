@@ -26,8 +26,8 @@ export default function Home() {
 
   return (
     <>
-    {/* fix this on small / phone screens */}
-      <header className='flex h-screen flex-col place-items-center justify-center bg-gradient-to-b from-orange-400 pb-96 text-center sm:p-10'>
+      {/* fix this on small / phone screens */}
+      <header className='flex h-screen flex-col place-items-center justify-center bg-gradient-to-b from-orange-400 pb-96 pt-52 text-center sm:p-10 sm:pt-0'>
         <h1 className='mt-10 text-center text-6xl font-bold text-white drop-shadow-lg md:text-9xl'>
           {allText.headerText}
         </h1>
@@ -48,7 +48,7 @@ export default function Home() {
 
       <section
         ref={aboutMeRef}
-        className='mx-10 grid grid-cols-1 items-center justify-items-center p-10 pb-10 text-center lg:grid-cols-2'
+        className='mx-10 grid grid-cols-1 items-center justify-items-center p-32 pb-20 text-center lg:grid-cols-2'
       >
         <img
           src='/profile-pic-white.png'
@@ -67,7 +67,9 @@ export default function Home() {
       </section>
 
       <section className='flex flex-col place-items-center justify-center  bg-gradient-to-b from-white to-slate-600 text-center'>
-        <h1>Projects</h1>
+        <h1 className='mt-10 p-16 text-6xl text-slate-600 drop-shadow'>
+          Projects
+        </h1>
         <Project
           title='The Title'
           description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ultrices dui sapien eget mi proin sed libero enim. Cursus mattis molestie a iaculis at. Vel pretium lectus quam id leo in.'
