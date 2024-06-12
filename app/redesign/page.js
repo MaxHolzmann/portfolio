@@ -21,9 +21,9 @@ export default function Home() {
   };
 
   //title, description, image, deployment, github)
-  const projectOne = {title:'Game-Log', description:'Lorem ipsum', image:'/blueberries.jpg', deployment:'test.com', github:'test.com'};
-  const projectTwo = {title:'Max Blog', description:'Lorem ipsum', image:'/blueberries.jpg', deployment:'test.com', github:'test.com'};
-  const projectThree = {title:'Blueberries Music', description:'Lorem ipsum', image:'/blueberries.jpg', deployment:'test.com', github:'test.com'};
+  const projectGameLog = {title:'Game-Log', description:'Game-Log is a web application for keeping track of your gaming backlog. Utilizing a kanban board style list, users can add games, remove games and categorize games between three lists, "Back Log", "Currently Playing" and "Completed". This project was built with ReactJS & TailwindCSS, utilizing MongoDB as a database solution and NextAuth as an authentication solution.', image:'/blueberries.jpg', deployment:'test.com', github:'test.com'};
+  const projectMaxBlog = {title:'Max Blog', description:'A basic blog application built with Handlebars, BootstrapCSS and MySQL / Sequelize.', image:'/blueberries.jpg', deployment:'test.com', github:'test.com'};
+  const projectBlueberries = {title:'Blueberries Music', description:'A landing page for a local barbershop quartet that I am apart of. This website utilizies primarily React and TailwindCSS, and is deployed via Vercel.', image:'/blueberries.jpg', deployment:'test.com', github:'test.com'};
 
   return (
     <>
@@ -68,29 +68,29 @@ export default function Home() {
       </section>
 
       <section className='flex flex-col place-items-center justify-center  bg-gradient-to-b from-white to-slate-600 text-center'>
-        <h1 className='mt-10 p-16 text-6xl text-slate-600 drop-shadow'>
+        <h1 className='mt-10 p-16 text-6xl bg-gradient-to-b from-slate-300 to-slate-600 bg-clip-text text-transparent drop-shadow'>
           Projects
         </h1>
         <Project
-          title={projectOne.title}
-          description={projectOne.description}
-          image={projectOne.image}
-          deployment={projectOne.deployment}
-          github={projectOne.github}
+          title={projectGameLog.title}
+          description={projectGameLog.description}
+          image={projectGameLog.image}
+          deployment={projectGameLog.deployment}
+          github={projectGameLog.github}
         ></Project>
         <Project
-          title={projectTwo.title}
-          description={projectTwo.description}
-          image={projectTwo.image}
-          deployment={projectTwo.deployment}
-          github={projectTwo.github}
+          title={projectBlueberries.title}
+          description={projectBlueberries.description}
+          image={projectBlueberries.image}
+          deployment={projectBlueberries.deployment}
+          github={projectBlueberries.github}
         ></Project>
         <Project
-          title={projectThree.title}
-          description={projectThree.description}
-          image={projectThree.image}
-          deployment={projectThree.deployment}
-          github={projectThree.github}
+          title={projectMaxBlog.title}
+          description={projectMaxBlog.description}
+          image={projectMaxBlog.image}
+          deployment={projectMaxBlog.deployment}
+          github={projectMaxBlog.github}
         ></Project>
       </section>
     </>
