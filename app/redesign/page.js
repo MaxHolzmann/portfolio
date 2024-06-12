@@ -5,8 +5,6 @@ import "aos/dist/aos.css";
 import Project from "../components/Project";
 import DownArrow from "../components/DownArrow";
 
-//add a dark mode toggle for fun! :D
-
 export default function Home() {
   const aboutMeRef = useRef();
   const allText = {
@@ -17,12 +15,15 @@ export default function Home() {
     sectionOneText:
       "I am a graduate of University of Minnesota's Full Stack Web Development Bootcamp. I have also completed a Web Development internship with HomeTownTickets.com. I am proficient in JavaScript and have experience with React, TailwindCSS, Node, Express, MongoDB, MySQL, Next.js & more.",
     sectionOneSecondText:
-      "I am an active member in my community as well as an experienced business professional. I am a licensed real estate agent and also serve on the Board of Directors for South Shore Chorale.",
+      "I am an active member in my community as well as an experienced business professional. I am a licensed real estate agent, real estate assistant & real estate transaction coordinator. I also serve on the Board of Directors for South Shore Chorale, and previously served on the Board of Directors for United Way Fond du Lac.",
     sectionOneThirdText:
-      "I am seeking a full-time position as a Web Developer. I believe my strong communication skills and professional experience would make a valuable asset to any team.",
+      "I am seeking a full-time position as a Front End or Full Stack Web Developer. I believe my strong communication skills and professional experience would make a valuable asset to any team.",
   };
+
   //title, description, image, deployment, github)
-  const projectOne = {};
+  const projectOne = {title:'Game-Log', description:'Lorem ipsum', image:'/blueberries.jpg', deployment:'test.com', github:'test.com'};
+  const projectTwo = {title:'Max Blog', description:'Lorem ipsum', image:'/blueberries.jpg', deployment:'test.com', github:'test.com'};
+  const projectThree = {title:'Blueberries Music', description:'Lorem ipsum', image:'/blueberries.jpg', deployment:'test.com', github:'test.com'};
 
   return (
     <>
@@ -71,25 +72,25 @@ export default function Home() {
           Projects
         </h1>
         <Project
-          title='The Title'
-          description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ultrices dui sapien eget mi proin sed libero enim. Cursus mattis molestie a iaculis at. Vel pretium lectus quam id leo in.'
-          image='/blueberries.jpg'
-          deployment='test.com'
-          github='test.com'
+          title={projectOne.title}
+          description={projectOne.description}
+          image={projectOne.image}
+          deployment={projectOne.deployment}
+          github={projectOne.github}
         ></Project>
         <Project
-          title='The Title'
-          description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ultrices dui sapien eget mi proin sed libero enim. Cursus mattis molestie a iaculis at. Vel pretium lectus quam id leo in.'
-          image='/blueberries.jpg'
-          deployment='test.com'
-          github='test.com'
+          title={projectTwo.title}
+          description={projectTwo.description}
+          image={projectTwo.image}
+          deployment={projectTwo.deployment}
+          github={projectTwo.github}
         ></Project>
         <Project
-          title='The Title'
-          description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ultrices dui sapien eget mi proin sed libero enim. Cursus mattis molestie a iaculis at. Vel pretium lectus quam id leo in.'
-          image='/blueberries.jpg'
-          deployment='test.com'
-          github='test.com'
+          title={projectThree.title}
+          description={projectThree.description}
+          image={projectThree.image}
+          deployment={projectThree.deployment}
+          github={projectThree.github}
         ></Project>
       </section>
     </>

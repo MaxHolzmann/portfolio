@@ -7,7 +7,7 @@ export default function Project({
 }) {
   return (
     <div className='m-3 w-3/4 rounded-lg bg-white p-3 shadow-md'>
-      <h1 className='pb-3 text-center font-mono text-2xl font-semibold md:text-3xl lg:text-4xl'>
+      <h1 className='pb-3 text-center font-sans text-2xl font-semibold md:text-3xl lg:text-4xl'>
         {title}
       </h1>
       <div className='grid grid-cols-1 gap-10 md:grid-cols-2'>
