@@ -1,139 +1,98 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-
-//add a dark mode toggle for fun! :D
+import Project from "./components/Project";
+import DownArrow from "./components/DownArrow";
 
 export default function Home() {
-  //Initiates AOS for Scrolling animations
-  useEffect(() => {
-    setTimeout(() => {
-      AOS.init();
-      AOS.refresh();
-    }, 100);
-  }, []);
-
-  // const [scrollPosition, setScrollPosition] = useState(0);
-
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     const position = window.pageYOffset;
-  //     setScrollPosition(position);
-  //   };
-
-  //   window.addEventListener("scroll", handleScroll);
-
-  //   return () => {
-  //     window.removeEventListener("scroll", handleScroll);
-  //   };
-  // }, []);
-
+  const aboutMeRef = useRef();
   const allText = {
-    headerText: "Hi, I'm Maximilian",
+    headerText: "Hi, I'm Maximilian.",
     headerName: "Maximilian",
-    headerDescription: "Full Stack Web Developer",
-    sectionOneHeader: "Passion",
+    headerDescription: "Full Stack Web Developer 💻",
+    sectionOneHeader: "Experience",
     sectionOneText:
-      "I pour my passion into every aspect of developing websites. From the initial concept to the final launch, I infuse my work with enthusiasm and dedication. With meticulous attention to detail, I craft visually captivating designs and seamless functionalities that engage and delight users.",
-    sectionTwoHeader: "Experience",
-    sectionTwoText:
-      "I am a graduate of University of Minnesota's Full Stack Web Development Bootcamp. I also have completed a Web Development internship with HomeTownTickets.com.",
-    sectionThreeHeader: "Projects",
-    sectionThreeText:
-      "Below you can find some of my personal projects that showcase my knowledge and skills.",
+      "Hi! I'm Maximilian Holzmann. I am a graduate of University of Minnesota's Full Stack Web Development Bootcamp. I have also completed a Web Development internship with HomeTownTickets.com. I am proficient in JavaScript and have experience with React, TailwindCSS, Node, Express, MongoDB, MySQL, Next.js & more.",
+    sectionOneSecondText:
+      "I am an active member in my community as well as an experienced business professional. I am a licensed real estate agent, real estate assistant & real estate transaction coordinator. I also serve on the Board of Directors for South Shore Chorale, and previously served on the Board of Directors for United Way Fond du Lac.",
+    sectionOneThirdText:
+      "I am seeking a full-time position as a Front End or Full Stack Web Developer. I believe my strong communication skills and professional experience would make a valuable asset to any team.",
   };
-  /* 
-  TODO: 
-  Add divs for each text block to handle padding / margin between each instead of applying margin to each text item
-  Change profile image
 
-  Potential snap idea where each section takes up full view of screen, changing color backgrounds etc.
-  Incorporate more images versus the wall of text.
-  redo some of the text.
-
-  */
+  //title, description, image, deployment, github)
+  const projectGameLog = {title:'Game-Log', description:'Game-Log is a web application for keeping track of your gaming backlog. Utilizing a kanban board style list, users can add games, remove games and categorize games between three lists, "Back Log", "Currently Playing" and "Completed". This project was built with ReactJS & TailwindCSS, utilizing MongoDB as a database solution and NextAuth as an authentication solution.', image:'/gamelog.png', deployment:'https://game-log.vercel.app/', github:'test.com'};
+  const projectMaxBlog = {title:'Max Blog', description:'A basic blog application built with Handlebars, BootstrapCSS and MySQL / Sequelize.', image:'/blueberries.jpg', deployment:'test.com', github:'test.com'};
+  const projectBlueberries = {title:'Blueberries Music', description:'A landing page for a local barbershop quartet that I am apart of. This website utilizies primarily React and TailwindCSS, and is deployed via Vercel.', image:'/blueberries.jpg', deployment:'test.com', github:'test.com'};
 
   return (
-    <div>
-      <main className='flex flex-col items-center'>
-        <div
-          data-aos='fade-down'
-          className='xsm: my-5 flex w-3/4 flex-col items-center justify-center gap-2 rounded-xl bg-gray-600 p-16 shadow-xl sm:flex-col lg:flex-row'
+    <>
+      {/* fix this on small / phone screens */}
+      <header className='flex h-screen flex-col place-items-center justify-center bg-gradient-to-b from-orange-400 pb-96 pt-52 text-center sm:p-10 sm:pt-0'>
+        <h1 className='mt-10 text-center text-6xl font-bold text-white drop-shadow-lg md:text-9xl'>
+          {allText.headerText}
+        </h1>
+        <h2 className='p-6 text-5xl font-semibold text-white drop-shadow'>
+          {allText.headerDescription}
+        </h2>
+        <button
+          onClick={() => {
+            aboutMeRef.current?.scrollIntoView({
+              behavior: "smooth",
+              block: "center",
+            });
+          }}
         >
-          <img
-            data-aos='fade-right'
-            className='h-64'
-            src='/profile-pic.png'
-          ></img>
+          <DownArrow className='drop-shadow-md hover:scale-105' />
+        </button>
+      </header>
 
-          <h1
-            data-aos='fade-left'
-            className='text-center text-6xl text-white sm:mt-10 lg:mt-0 lg:text-8xl'
-          >
-            {allText.headerText}
+      <section
+        ref={aboutMeRef}
+        className='mx-10 grid grid-cols-1 items-center justify-items-center md:p-32 md:pb-20 text-center lg:grid-cols-2 lg:gap-20'
+      >
+        <img
+          src='/profile-pic-white.png'
+          className='max-w-md rounded-full shadow-lg sm:mb-5 sm:max-w-sm'
+        />
+        <div className='flex max-w-4xl flex-col justify-center'>
+          <h1 className='bg-gradient-to-r from-orange-500 to-white bg-clip-text pb-10 text-6xl font-semibold text-transparent mt-10 md:mt-0'>
+            About Me
           </h1>
+          <p className='pb-4 text-xl font-normal'>{allText.sectionOneText}</p>
+          <p className=' pb-4 text-xl font-normal'>
+            {allText.sectionOneSecondText}
+          </p>
+          <p className=' text-xl font-normal '>{allText.sectionOneThirdText}</p>
         </div>
+      </section>
 
-        <div
-          className='mx-40 my-2 flex flex-col items-center justify-center gap-2  p-10'
-          data-aos='fade-up'
-        >
-          <h2 class='animate-text bg-gradient-to-r from-teal-500 via-purple-500 to-orange-500 bg-clip-text text-center text-7xl font-semibold text-transparent'>
-            {allText.headerDescription}
-          </h2>
-        </div>
-      </main>
-
-      <div className='my-5 flex flex-col items-center justify-center gap-2 bg-white p-12'>
-        <h1
-          data-aos='fade-up'
-          data-aos-anchor-placement='top-center'
-          className='text-center text-8xl'
-        >
-          {allText.sectionOneHeader}
+      <section className='flex flex-col place-items-center justify-center  bg-gradient-to-b from-white to-slate-600 text-center'>
+        <h1 className='mt-10 p-16 text-8xl bg-gradient-to-b from-slate-300 to-slate-600 bg-clip-text text-transparent drop-shadow'>
+          Projects
         </h1>
-
-        <h2
-          data-aos='fade-up'
-          data-aos-anchor-placement='top-center'
-          className='py-10 text-center text-4xl text-gray-600'
-        >
-          {allText.sectionOneText}
-        </h2>
-
-        <h1
-          data-aos='fade-up'
-          data-aos-anchor-placement='top-center'
-          className='py-20 text-center text-8xl'
-        >
-          {allText.sectionTwoHeader}
-        </h1>
-
-        <h2
-          data-aos='fade-up'
-          data-aos-anchor-placement='top-center'
-          className='text-center text-4xl'
-        >
-          {allText.sectionTwoText}
-        </h2>
-
-        <h1
-          data-aos='fade-up'
-          data-aos-anchor-placement='top-center'
-          className='py-20 text-center text-8xl'
-        >
-          {allText.sectionThreeHeader}
-        </h1>
-
-        <h2
-          data-aos='fade-up'
-          data-aos-anchor-placement='top-center'
-          className='text-center text-4xl'
-        >
-          {allText.sectionThreeText}
-        </h2>
-      </div>
-    </div>
+        <Project
+          title={projectGameLog.title}
+          description={projectGameLog.description}
+          image={projectGameLog.image}
+          deployment={projectGameLog.deployment}
+          github={projectGameLog.github}
+        ></Project>
+        <Project
+          title={projectBlueberries.title}
+          description={projectBlueberries.description}
+          image={projectBlueberries.image}
+          deployment={projectBlueberries.deployment}
+          github={projectBlueberries.github}
+        ></Project>
+        <Project
+          title={projectMaxBlog.title}
+          description={projectMaxBlog.description}
+          image={projectMaxBlog.image}
+          deployment={projectMaxBlog.deployment}
+          github={projectMaxBlog.github}
+        ></Project>
+      </section>
+    </>
   );
 }
