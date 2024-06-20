@@ -13,7 +13,7 @@ export default function Home() {
     headerDescription: "Full Stack Web Developer 💻",
     sectionOneHeader: "Experience",
     sectionOneText:
-      "I am a graduate of University of Minnesota's Full Stack Web Development Bootcamp. I have also completed a Web Development internship with HomeTownTickets.com. I am proficient in JavaScript and have experience with React, TailwindCSS, Node, Express, MongoDB, MySQL, Next.js & more.",
+      "Hi! I'm Maximilian Holzmann. I am a graduate of University of Minnesota's Full Stack Web Development Bootcamp. I have also completed a Web Development internship with HomeTownTickets.com. I am proficient in JavaScript and have experience with React, TailwindCSS, Node, Express, MongoDB, MySQL, Next.js & more.",
     sectionOneSecondText:
       "I am an active member in my community as well as an experienced business professional. I am a licensed real estate agent, real estate assistant & real estate transaction coordinator. I also serve on the Board of Directors for South Shore Chorale, and previously served on the Board of Directors for United Way Fond du Lac.",
     sectionOneThirdText:
@@ -49,14 +49,14 @@ export default function Home() {
 
       <section
         ref={aboutMeRef}
-        className='mx-10 grid grid-cols-1 items-center justify-items-center p-32 pb-20 text-center lg:grid-cols-2'
+        className='mx-10 grid grid-cols-1 items-center justify-items-center md:p-32 md:pb-20 text-center lg:grid-cols-2 lg:gap-20'
       >
         <img
           src='/profile-pic-white.png'
           className='max-w-md rounded-full shadow-lg sm:mb-5 sm:max-w-sm'
         />
         <div className='flex max-w-4xl flex-col justify-center'>
-          <h1 className='bg-gradient-to-r from-orange-500 to-white bg-clip-text pb-10 text-6xl font-semibold text-transparent'>
+          <h1 className='bg-gradient-to-r from-orange-500 to-white bg-clip-text pb-10 text-6xl font-semibold text-transparent mt-10 md:mt-0'>
             About Me
           </h1>
           <p className='pb-4 text-xl font-normal'>{allText.sectionOneText}</p>
@@ -68,7 +68,7 @@ export default function Home() {
       </section>
 
       <section className='flex flex-col place-items-center justify-center  bg-gradient-to-b from-white to-slate-600 text-center'>
-        <h1 className='mt-10 p-16 text-6xl bg-gradient-to-b from-slate-300 to-slate-600 bg-clip-text text-transparent drop-shadow'>
+        <h1 className='mt-10 p-16 text-8xl bg-gradient-to-b from-slate-300 to-slate-600 bg-clip-text text-transparent drop-shadow'>
           Projects
         </h1>
         <Project
