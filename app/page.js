@@ -21,9 +21,9 @@ export default function Home() {
   };
 
   //title, description, image, deployment, github)
-  const projectGameLog = {title:'Game-Log', description:'Game-Log is a web application for keeping track of your gaming backlog. Utilizing a kanban board style list, users can add games, remove games and categorize games between three lists, "Back Log", "Currently Playing" and "Completed". This project was built with ReactJS & TailwindCSS, utilizing MongoDB as a database solution and NextAuth as an authentication solution.', image:'/gamelog.png', deployment:'https://game-log.vercel.app/', github:'test.com'};
-  const projectMaxBlog = {title:'Max Blog', description:'A basic blog application built with Handlebars, BootstrapCSS and MySQL / Sequelize.', image:'/blueberries.jpg', deployment:'test.com', github:'test.com'};
-  const projectBlueberries = {title:'Blueberries Music', description:'A landing page for a local barbershop quartet that I am apart of. This website utilizies primarily React and TailwindCSS, and is deployed via Vercel.', image:'/blueberries.jpg', deployment:'test.com', github:'test.com'};
+  const projectGameLog = {title:'Game-Log', description:'Game-Log is a web application for keeping track of your gaming backlog. Utilizing a kanban board style list, users can add games, remove games and categorize games between three lists, "Back Log", "Currently Playing" and "Completed". This project was built with ReactJS & TailwindCSS, utilizing MongoDB as a database solution and NextAuth as an authentication solution.', image:'/gamelog.png', deployment:'https://game-log.vercel.app/', github:'https://github.com/MaxHolzmann/game-log'};
+  const projectMaxBlog = {title:'Max Blog', description:'A basic blog application built with Handlebars, BootstrapCSS and MySQL / Sequelize.', image:'/blueberries.jpg', deployment:'https://max-blog.herokuapp.com/', github:'https://github.com/MaxHolzmann/maxs-blog'};
+  const projectBlueberries = {title:'Blueberries Music', description:'A landing page for a local barbershop quartet that I am apart of. This website utilizies primarily React and TailwindCSS, and is deployed via Vercel.', image:'/blueberries.jpg', deployment:'https://www.blueberriesmusic.com/', github:'https://github.com/MaxHolzmann/blueberriesmusic'};
 
   return (
     <>
