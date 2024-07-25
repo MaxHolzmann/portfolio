@@ -47,9 +47,9 @@ export default function Home() {
   const projectHourLog = {
     title: "Hour Log",
     description: "desc",
-    image: "img",
-    deployment: "deploy",
-    github: "github",
+    image: "/hourlog.png",
+    deployment: "https://hour-log-gamma.vercel.app/",
+    github: "https://github.com/MaxHolzmann/hour-log",
   };
 
   return (
