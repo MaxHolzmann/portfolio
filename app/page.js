@@ -1,6 +1,5 @@
 "use client";
-import { useState, useEffect, useRef } from "react";
-import AOS from "aos";
+import { useRef } from "react";
 import "aos/dist/aos.css";
 import Project from "./components/Project";
 import DownArrow from "./components/DownArrow";
@@ -21,18 +20,46 @@ export default function Home() {
   };
 
   //title, description, image, deployment, github)
-  const projectGameLog = {title:'Game-Log', description:'Game-Log is a web application for keeping track of your gaming backlog. Utilizing a kanban board style list, users can add games, remove games and categorize games between three lists, "Back Log", "Currently Playing" and "Completed". This project was built with ReactJS & TailwindCSS, utilizing MongoDB as a database solution and NextAuth as an authentication solution.', image:'/gamelog.png', deployment:'https://game-log.vercel.app/', github:'https://github.com/MaxHolzmann/game-log'};
-  const projectMaxBlog = {title:'Max Blog', description:'A basic blog application built with Handlebars, BootstrapCSS and MySQL / Sequelize.', image:'/blueberries.jpg', deployment:'https://max-blog.herokuapp.com/', github:'https://github.com/MaxHolzmann/maxs-blog'};
-  const projectBlueberries = {title:'Blueberries Music', description:'A landing page for a local barbershop quartet that I am apart of. This website utilizies primarily React and TailwindCSS, and is deployed via Vercel.', image:'/blueberries.jpg', deployment:'https://www.blueberriesmusic.com/', github:'https://github.com/MaxHolzmann/blueberriesmusic'};
+  const projectGameLog = {
+    title: "Game-Log",
+    description:
+      'Game-Log is a web application for keeping track of your gaming backlog. Utilizing a kanban board style list, users can add games, remove games and categorize games between three lists, "Back Log", "Currently Playing" and "Completed". This project was built with ReactJS & TailwindCSS, utilizing MongoDB as a database solution and NextAuth as an authentication solution.',
+    image: "/gamelog.png",
+    deployment: "https://game-log.vercel.app/",
+    github: "https://github.com/MaxHolzmann/game-log",
+  };
+  const projectMaxBlog = {
+    title: "Max Blog",
+    description:
+      "A basic blog application built with Handlebars, BootstrapCSS and MySQL / Sequelize.",
+    image: "/blueberries.jpg",
+    deployment: "https://max-blog.herokuapp.com/",
+    github: "https://github.com/MaxHolzmann/maxs-blog",
+  };
+  const projectBlueberries = {
+    title: "Blueberries Music",
+    description:
+      "A landing page for a local barbershop quartet that I am apart of. This website utilizies primarily React and TailwindCSS, and is deployed via Vercel.",
+    image: "/blueberries.jpg",
+    deployment: "https://www.blueberriesmusic.com/",
+    github: "https://github.com/MaxHolzmann/blueberriesmusic",
+  };
+  const projectHourLog = {
+    title: "Hour Log",
+    description: "desc",
+    image: "img",
+    deployment: "deploy",
+    github: "github",
+  };
 
   return (
     <>
       {/* fix this on small / phone screens */}
-      <header className='flex h-screen flex-col place-items-center justify-center bg-gradient-to-b from-orange-400 pb-96 pt-52 text-center sm:p-10 sm:pt-0'>
-        <h1 className='mt-10 text-center text-6xl font-bold text-white drop-shadow-lg md:text-9xl'>
+      <header className="flex h-screen flex-col place-items-center justify-center bg-gradient-to-b from-orange-400 pb-96 pt-52 text-center sm:p-10 sm:pt-0">
+        <h1 className="mt-10 text-center text-6xl font-bold text-white drop-shadow-lg md:text-9xl">
           {allText.headerText}
         </h1>
-        <h2 className='p-6 text-5xl font-semibold text-white drop-shadow'>
+        <h2 className="p-6 text-5xl font-semibold text-white drop-shadow">
           {allText.headerDescription}
         </h2>
         <button
@@ -43,32 +70,32 @@ export default function Home() {
             });
           }}
         >
-          <DownArrow className='drop-shadow-md hover:scale-105' />
+          <DownArrow className="drop-shadow-md hover:scale-105" />
         </button>
       </header>
 
       <section
         ref={aboutMeRef}
-        className='mx-10 grid grid-cols-1 items-center justify-items-center md:p-32 md:pb-20 text-center lg:grid-cols-2 lg:gap-20'
+        className="mx-10 grid grid-cols-1 items-center justify-items-center text-center md:p-32 md:pb-20 lg:grid-cols-2 lg:gap-20"
       >
         <img
-          src='/profile-pic-white.png'
-          className='max-w-md rounded-full shadow-lg sm:mb-5 sm:max-w-sm'
+          src="/profile-pic-white.png"
+          className="max-w-md rounded-full shadow-lg sm:mb-5 sm:max-w-sm"
         />
-        <div className='flex max-w-4xl flex-col justify-center'>
-          <h1 className='bg-gradient-to-r from-orange-500 to-white bg-clip-text pb-10 text-6xl font-semibold text-transparent mt-10 md:mt-0'>
+        <div className="flex max-w-4xl flex-col justify-center">
+          <h1 className="mt-10 bg-gradient-to-r from-orange-500 to-white bg-clip-text pb-10 text-6xl font-semibold text-transparent md:mt-0">
             About Me
           </h1>
-          <p className='pb-4 text-xl font-normal'>{allText.sectionOneText}</p>
-          <p className=' pb-4 text-xl font-normal'>
+          <p className="pb-4 text-xl font-normal">{allText.sectionOneText}</p>
+          <p className=" pb-4 text-xl font-normal">
             {allText.sectionOneSecondText}
           </p>
-          <p className=' text-xl font-normal '>{allText.sectionOneThirdText}</p>
+          <p className=" text-xl font-normal ">{allText.sectionOneThirdText}</p>
         </div>
       </section>
 
-      <section className='flex flex-col place-items-center justify-center  bg-gradient-to-b from-white to-slate-600 text-center'>
-        <h1 className='mt-10 p-16 text-8xl bg-gradient-to-b from-slate-300 to-slate-600 bg-clip-text text-transparent drop-shadow'>
+      <section className="flex flex-col place-items-center justify-center  bg-gradient-to-b from-white to-slate-600 text-center">
+        <h1 className="mt-10 bg-gradient-to-b from-slate-300 to-slate-600 bg-clip-text p-16 text-8xl text-transparent drop-shadow">
           Projects
         </h1>
         <Project
@@ -77,6 +104,13 @@ export default function Home() {
           image={projectGameLog.image}
           deployment={projectGameLog.deployment}
           github={projectGameLog.github}
+        ></Project>
+        <Project
+          title={projectHourLog.title}
+          description={projectHourLog.description}
+          image={projectHourLog.image}
+          deployment={projectHourLog.deployment}
+          github={projectBlueberries.github}
         ></Project>
         <Project
           title={projectBlueberries.title}
