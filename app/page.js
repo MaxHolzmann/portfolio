@@ -104,7 +104,7 @@ export default function Home() {
       </section>
 
       <section className="flex flex-col place-items-center justify-center  bg-gradient-to-b from-white to-slate-600 text-center">
-        <h1 className="mt-10 bg-gradient-to-b from-slate-300 to-slate-600 bg-clip-text p-16 text-8xl text-transparent drop-shadow">
+        <h1 className="mt-10 bg-gradient-to-b from-slate-200 to-slate-500 bg-clip-text p-16 text-8xl text-transparent drop-shadow">
           Projects
         </h1>
         <Project
