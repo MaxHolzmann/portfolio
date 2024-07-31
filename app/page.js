@@ -65,7 +65,7 @@ export default function Home() {
     <>
       {/* fix this on small / phone screens */}
       <header className="flex h-screen flex-col place-items-center justify-center bg-gradient-to-b from-orange-400 pb-96 pt-52 text-center sm:p-10 sm:pt-0">
-        <h1 className="mt-10 text-center text-6xl font-bold text-white drop-shadow-lg md:text-9xl">
+        <h1 className="text-wrap mt-10 text-center text-6xl font-bold text-white drop-shadow-lg md:text-9xl">
           {allText.headerText}
         </h1>
         <h2 className="p-6 text-5xl font-semibold text-white drop-shadow">
