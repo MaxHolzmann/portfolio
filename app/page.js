@@ -46,10 +46,19 @@ export default function Home() {
   };
   const projectHourLog = {
     title: "Hour Log",
-    description: "desc",
+    description:
+      'A full stack web application created using React, TailwindCSS, Next.JS, MongoDB & NextAuth. This web application is a simple solution for tracking work hours for companies who have employees track their own hours. Utilizing the "react-to-print" library, users can select a range of dates & export their hours into a convienant file PDF for their employer.',
     image: "/hourlog.png",
     deployment: "https://hour-log-gamma.vercel.app/",
     github: "https://github.com/MaxHolzmann/hour-log",
+  };
+  const projectTimeline = {
+    title: "Real Estate Timeline Generator",
+    description:
+      "A one page web app utiilizing React Form Hook, in coalition with React, TailwindCSS and NextJS. This web application asks the user to input information regarding the timelines in a Real Estate transaction and creates a branded PDF for the user to send to their client. I created this project for my own Real Estate practice & my Real Estate team, The Schiek Team.",
+    image: "/hourlog.png",
+    deployment: "https://timeline-gen.vercel.app/",
+    github: "https://github.com/MaxHolzmann/real-estate-timeline-gen",
   };
 
   return (
@@ -111,6 +120,13 @@ export default function Home() {
           image={projectHourLog.image}
           deployment={projectHourLog.deployment}
           github={projectBlueberries.github}
+        ></Project>
+        <Project
+          title={projectTimeline.title}
+          description={projectTimeline.description}
+          image={projectTimeline.image}
+          deployment={projectTimeline.deployment}
+          github={projectTimeline.github}
         ></Project>
         <Project
           title={projectBlueberries.title}
