@@ -91,7 +91,7 @@ export default function Home() {
           className="max-w-md rounded-full shadow-lg sm:mb-5 sm:max-w-sm"
         />
         <div className="flex max-w-4xl flex-col justify-center">
-          <h1 className="mt-10 bg-gradient-radial from-orange-500 to-orange-200  bg-clip-text pb-10 font-bebas text-8xl font-semibold text-transparent md:mt-0">
+          <h1 className="mt-10 animate-text bg-gradient-radial from-orange-500  to-orange-200 bg-clip-text pb-10 font-bebas text-8xl font-semibold text-transparent md:mt-0">
             About Me
           </h1>
           <p className="pb-4 text-xl font-normal">{allText.sectionOneText}</p>
@@ -103,7 +103,7 @@ export default function Home() {
       </section>
 
       <section className="flex flex-col place-items-center justify-center  bg-gradient-to-b from-white to-slate-600 text-center">
-        <h1 className="mt-10  bg-gradient-to-b from-slate-400 to-slate-500 bg-clip-text p-16 font-bebas text-8xl text-transparent drop-shadow-md">
+        <h1 className="mt-10 animate-text  bg-gradient-radial from-slate-500 to-slate-400 bg-clip-text p-16 font-bebas text-8xl text-transparent drop-shadow-md">
           Projects
         </h1>
         <Project
