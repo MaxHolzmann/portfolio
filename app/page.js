@@ -63,9 +63,8 @@ export default function Home() {
 
   return (
     <>
-      {/* fix this on small / phone screens */}
-      <header className="flex h-screen flex-col place-items-center justify-center bg-gradient-to-b from-orange-400 pb-96 pt-52 text-center sm:p-10 sm:pt-0">
-        <h1 className="text-wrap mt-10 text-center font-bebas text-8xl font-bold tracking-wide text-white drop-shadow-lg md:text-9xl">
+      <header className="flex h-screen flex-col place-items-center justify-center bg-gradient-to-b from-orange-400 from-10% to-95% pb-96 pt-52 text-center sm:p-10 sm:pt-0">
+        <h1 className="text-wrap mt-8 text-center font-bebas text-8xl font-bold tracking-wide text-white drop-shadow-lg md:text-9xl">
           {allText.headerText}
         </h1>
         <h2 className="p-8 font-bebas text-6xl font-semibold tracking-wide text-white drop-shadow">
@@ -92,7 +91,7 @@ export default function Home() {
           className="max-w-md rounded-full shadow-lg sm:mb-5 sm:max-w-sm"
         />
         <div className="flex max-w-4xl flex-col justify-center">
-          <h1 className="mt-10 bg-gradient-to-r from-orange-500 to-white bg-clip-text pb-10 font-bebas text-6xl font-semibold text-transparent md:mt-0">
+          <h1 className="mt-10 bg-gradient-radial from-orange-500 to-orange-200  bg-clip-text pb-10 font-bebas text-8xl font-semibold text-transparent md:mt-0">
             About Me
           </h1>
           <p className="pb-4 text-xl font-normal">{allText.sectionOneText}</p>

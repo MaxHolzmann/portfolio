@@ -9,7 +9,7 @@ export default function Project({
   // make buttons more interesting?
 
   return (
-    <div className="m-3 w-3/4 rounded-lg bg-white bg-gradient-radial from-white from-50% to-slate-300 p-3 shadow-md">
+    <div className="m-3 w-3/4 rounded-lg bg-white bg-gradient-radial from-white from-60% to-slate-300 p-3 shadow-md">
       <h1 className="pb-7 text-center font-poppins text-3xl text-slate-500 drop-shadow-md md:text-3xl lg:text-4xl">
         {title}
       </h1>
