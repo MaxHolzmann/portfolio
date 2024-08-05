@@ -8,8 +8,8 @@ const DownArrow = ({ className }) => {
         version="1.1"
         id="Layer_1"
         xmlns="http://www.w3.org/2000/svg"
-        width="150px"
-        height="150px"
+        width="100px"
+        height="100px"
         viewBox="0 0 100 100"
         enableBackground="new 0 0 100 100"
         className={className}

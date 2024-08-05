@@ -9,10 +9,10 @@ export default function Home() {
   const allText = {
     headerText: "Hi, I'm Maximilian.",
     headerName: "Maximilian",
-    headerDescription: "Full Stack Web Developer 💻",
+    headerDescription: "Full Stack Web Developer.",
     sectionOneHeader: "Experience",
     sectionOneText:
-      "Hi! I'm Maximilian Holzmann. I am a graduate of University of Minnesota's Full Stack Web Development Bootcamp. I have also completed a Web Development internship with HomeTownTickets.com. I am proficient in JavaScript and have experience with React, TailwindCSS, Node, Express, MongoDB, MySQL, Next.js & more.",
+      "Hi! I'm Maximilian Holzmann. I am a graduate of University of Minnesota's Full Stack Web Development Bootcamp. I have also completed a Web Development internship with HomeTownTickets.com. I am proficient in JavaScript, React, TailwindCSS, Node, Express, MongoDB, MySQL, Next.js & more.",
     sectionOneSecondText:
       "I am an active member in my community as well as an experienced business professional. I am a licensed real estate agent, real estate assistant & real estate transaction coordinator. I also serve on the Board of Directors for South Shore Chorale, and previously served on the Board of Directors for United Way Fond du Lac.",
     sectionOneThirdText:
@@ -32,7 +32,7 @@ export default function Home() {
     title: "Max Blog",
     description:
       "A basic blog application built with Handlebars, BootstrapCSS and MySQL / Sequelize.",
-    image: "/blueberries.jpg",
+    image: "/maxblog.png",
     deployment: "https://max-blog.herokuapp.com/",
     github: "https://github.com/MaxHolzmann/maxs-blog",
   };
@@ -56,7 +56,7 @@ export default function Home() {
     title: "Real Estate Timeline Generator",
     description:
       "A one page web app utiilizing React Form Hook, in coalition with React, TailwindCSS and NextJS. This web application asks the user to input information regarding the timelines in a Real Estate transaction and creates a branded PDF for the user to send to their client. I created this project for my own Real Estate practice & my Real Estate team, The Schiek Team.",
-    image: "/hourlog.png",
+    image: "/timeline.png",
     deployment: "https://timeline-gen.vercel.app/",
     github: "https://github.com/MaxHolzmann/real-estate-timeline-gen",
   };
@@ -65,10 +65,10 @@ export default function Home() {
     <>
       {/* fix this on small / phone screens */}
       <header className="flex h-screen flex-col place-items-center justify-center bg-gradient-to-b from-orange-400 pb-96 pt-52 text-center sm:p-10 sm:pt-0">
-        <h1 className="text-wrap mt-10 text-center text-6xl font-bold text-white drop-shadow-lg md:text-9xl">
+        <h1 className="text-wrap mt-10 text-center font-bebas text-8xl font-bold tracking-wide text-white drop-shadow-lg md:text-9xl">
           {allText.headerText}
         </h1>
-        <h2 className="p-6 text-5xl font-semibold text-white drop-shadow">
+        <h2 className="p-8 font-bebas text-6xl font-semibold tracking-wide text-white drop-shadow">
           {allText.headerDescription}
         </h2>
         <button
@@ -92,7 +92,7 @@ export default function Home() {
           className="max-w-md rounded-full shadow-lg sm:mb-5 sm:max-w-sm"
         />
         <div className="flex max-w-4xl flex-col justify-center">
-          <h1 className="mt-10 bg-gradient-to-r from-orange-500 to-white bg-clip-text pb-10 text-6xl font-semibold text-transparent md:mt-0">
+          <h1 className="mt-10 bg-gradient-to-r from-orange-500 to-white bg-clip-text pb-10 font-bebas text-6xl font-semibold text-transparent md:mt-0">
             About Me
           </h1>
           <p className="pb-4 text-xl font-normal">{allText.sectionOneText}</p>
@@ -104,7 +104,7 @@ export default function Home() {
       </section>
 
       <section className="flex flex-col place-items-center justify-center  bg-gradient-to-b from-white to-slate-600 text-center">
-        <h1 className="mt-10 bg-gradient-to-b from-slate-400 to-slate-500 bg-clip-text p-16 text-8xl text-transparent drop-shadow-md">
+        <h1 className="mt-10  bg-gradient-to-b from-slate-400 to-slate-500 bg-clip-text p-16 font-bebas text-8xl text-transparent drop-shadow-md">
           Projects
         </h1>
         <Project
