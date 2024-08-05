@@ -63,7 +63,7 @@ export default function Home() {
 
   return (
     <>
-      <header className="flex h-screen flex-col place-items-center justify-center bg-gradient-to-b from-orange-400 from-10% to-95% pb-96 pt-52 text-center sm:p-10 sm:pt-0">
+      <header className="sm: flex h-screen flex-col place-items-center justify-center bg-gradient-radial from-orange-500 via-orange-500 to-white to-70% pb-96 pt-52 text-center sm:p-10 sm:pt-0">
         <h1 className="text-wrap mt-8 text-center font-bebas text-8xl font-bold tracking-wide text-white drop-shadow-lg md:text-9xl">
           {allText.headerText}
         </h1>
@@ -103,7 +103,7 @@ export default function Home() {
       </section>
 
       <section className="flex flex-col place-items-center justify-center  bg-gradient-to-b from-white to-slate-600 text-center">
-        <h1 className="mt-10 animate-text  bg-gradient-radial from-slate-500 to-slate-400 bg-clip-text p-16 font-bebas text-8xl text-transparent drop-shadow-md">
+        <h1 className="to-slate-00 mt-10  animate-text bg-gradient-radial from-slate-500 bg-clip-text p-16 font-bebas text-8xl text-transparent drop-shadow-md">
           Projects
         </h1>
         <Project
