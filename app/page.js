@@ -102,7 +102,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="flex flex-col place-items-center justify-center  bg-gradient-to-b from-white to-slate-600 text-center">
+      <section className="via-slate- flex flex-col place-items-center  justify-center bg-gradient-to-b from-white to-slate-500 text-center">
         <h1 className="to-slate-00 mt-10  animate-text bg-gradient-radial from-slate-500 bg-clip-text p-16 font-bebas text-8xl text-transparent drop-shadow-md">
           Projects
         </h1>
@@ -142,7 +142,7 @@ export default function Home() {
           github={projectMaxBlog.github}
         ></Project>
       </section>
-      <section className="mb-10 flex flex-col place-items-center  justify-center bg-gradient-to-b from-slate-600 to-white text-center">
+      <section className="mb-10 flex flex-col place-items-center  justify-center bg-gradient-to-b from-slate-500 to-white text-center">
         <h1 className="animate-text bg-gradient-radial from-white to-slate-50 bg-clip-text pt-20 font-bebas text-8xl font-semibold text-transparent md:mt-0">
           Contact Me
         </h1>
