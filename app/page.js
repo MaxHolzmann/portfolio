@@ -142,17 +142,17 @@ export default function Home() {
           github={projectMaxBlog.github}
         ></Project>
       </section>
-      <section className="mb-10 flex flex-col place-items-center  justify-center bg-gradient-to-b from-slate-500 to-white text-center">
+      <section className="flex flex-col place-items-center justify-center bg-gradient-to-b from-slate-500 to-slate-500 pb-36 text-center">
         <h1 className="animate-text bg-gradient-radial from-white to-slate-50 bg-clip-text pt-20 font-bebas text-8xl font-semibold text-transparent md:mt-0">
           Contact Me
         </h1>
         <p className="mb-10 text-center font-bebas text-xl tracking-wide text-white">
           See my various forms of contact below:
         </p>
-        <div className="mt-10 flex flex-col gap-12 sm:flex-row">
+        <div className="mt-10 flex flex-col gap-12 gap-y-16 sm:flex-row">
           <button>
             <a
-              className="rounded-md bg-slate-600 p-4 text-2xl font-bold text-white drop-shadow-md hover:bg-slate-500"
+              className="rounded-md bg-slate-700 p-4 text-2xl font-bold text-white drop-shadow-md hover:bg-slate-500"
               href="mailto:max@holzmann.io"
             >
               Email
@@ -160,7 +160,7 @@ export default function Home() {
           </button>
           <button>
             <a
-              className="rounded-md bg-slate-600 p-4 text-2xl font-bold text-white drop-shadow-md hover:bg-slate-500"
+              className="rounded-md bg-slate-700 p-4 text-2xl font-bold text-white drop-shadow-md hover:bg-slate-500"
               href="https://resume.io/r/HEv3It4mA"
               target="_blank"
             >
@@ -171,7 +171,7 @@ export default function Home() {
             <a
               href="https://www.github.com/MaxHolzmann"
               target="_blank"
-              className="rounded-md bg-slate-600 p-4 text-2xl font-bold text-white drop-shadow-md hover:bg-slate-500"
+              className="rounded-md bg-slate-700 p-4 text-2xl font-bold text-white drop-shadow-md hover:bg-slate-500"
             >
               GitHub
             </a>
@@ -180,7 +180,7 @@ export default function Home() {
             <a
               href="https://www.linkedin.com/in/maximilian-holzmann-416483216/"
               target="_blank"
-              className="rounded-md bg-slate-600 p-4 text-2xl font-bold text-white drop-shadow-md hover:bg-slate-500"
+              className="rounded-md bg-slate-700 p-4 text-2xl font-bold text-white drop-shadow-md hover:bg-slate-500"
             >
               LinkedIn
             </a>
