@@ -161,7 +161,7 @@ export default function Home() {
           <button>
             <a
               className="rounded-md bg-slate-700 p-4 text-2xl font-bold text-white drop-shadow-md hover:bg-slate-500"
-              href="https://resume.io/r/HEv3It4mA"
+              href="/resume.pdf"
               target="_blank"
             >
               Resume
