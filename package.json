@@ -16,7 +16,8 @@
     "eslint-config-next": "13.4.2",
     "next": "^13.5.4",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "tailwindcss-animated": "^1.1.2"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.14",
