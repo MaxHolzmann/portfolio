@@ -3,6 +3,12 @@ import { useRef } from "react";
 import "aos/dist/aos.css";
 import Project from "./components/Project";
 import DownArrow from "./components/DownArrow";
+import {
+  AiFillFileText,
+  AiFillGithub,
+  AiFillLinkedin,
+  AiFillMail,
+} from "react-icons/ai";
 
 export default function Home() {
   const aboutMeRef = useRef();
@@ -152,37 +158,41 @@ export default function Home() {
         <div className="mt-10 flex flex-col gap-12 gap-y-16 sm:flex-row">
           <button>
             <a
-              className="rounded-md bg-slate-700 p-4 text-2xl font-bold text-white drop-shadow-md hover:bg-slate-500"
+              className="flex place-items-center justify-between gap-2 rounded-md bg-slate-700 p-4 text-xl font-bold text-white drop-shadow-md hover:bg-slate-500"
               href="mailto:max@holzmann.io"
             >
-              Email
+              <AiFillMail />
+              <p>Email</p>
             </a>
           </button>
           <button>
             <a
-              className="rounded-md bg-slate-700 p-4 text-2xl font-bold text-white drop-shadow-md hover:bg-slate-500"
+              className="flex place-items-center justify-between gap-2 rounded-md bg-slate-700 p-4 text-xl font-bold text-white drop-shadow-md hover:bg-slate-500"
               href="/resume.pdf"
               target="_blank"
             >
-              Resume
+              <AiFillFileText className="text-3xl" />
+              <p>Resume</p>
             </a>
           </button>
           <button>
             <a
               href="https://www.github.com/MaxHolzmann"
               target="_blank"
-              className="rounded-md bg-slate-700 p-4 text-2xl font-bold text-white drop-shadow-md hover:bg-slate-500"
+              className="flex place-items-center justify-between gap-2 rounded-md bg-slate-700 p-4 text-xl font-bold text-white drop-shadow-md hover:bg-slate-500"
             >
-              GitHub
+              <AiFillGithub />
+              <p>GitHub</p>
             </a>
           </button>
           <button>
             <a
               href="https://www.linkedin.com/in/maximilian-holzmann-416483216/"
               target="_blank"
-              className="rounded-md bg-slate-700 p-4 text-2xl font-bold text-white drop-shadow-md hover:bg-slate-500"
+              className="flex place-items-center justify-between gap-2 rounded-md bg-slate-700 p-4 text-xl font-bold text-white drop-shadow-md hover:bg-slate-500"
             >
-              LinkedIn
+              <AiFillLinkedin />
+              <p>LinkedIn</p>
             </a>
           </button>
         </div>
