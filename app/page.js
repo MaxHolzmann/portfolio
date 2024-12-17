@@ -102,8 +102,11 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="via-slate- flex flex-col place-items-center  justify-center bg-gradient-to-b from-white to-slate-500 text-center">
-        <h1 className="to-slate-00 mt-10  animate-text bg-gradient-radial from-slate-500 bg-clip-text p-16 font-bebas text-8xl text-transparent drop-shadow-md">
+      <section className="via-slate- flex flex-col place-items-center  justify-center bg-gradient-to-b from-white via-slate-400 via-80% to-white text-center">
+        {/* <h1 className="to-slate-00 mt-10  animate-text bg-gradient-radial from-slate-500 bg-clip-text p-16 font-bebas text-8xl text-transparent drop-shadow-md">
+          Projects
+        </h1> */}
+        <h1 className=" mt-10 bg-gradient-radial from-slate-500 to-slate-600 bg-clip-text p-16 font-bebas text-8xl text-transparent drop-shadow-md">
           Projects
         </h1>
         <Project
@@ -142,13 +145,10 @@ export default function Home() {
           github={projectMaxBlog.github}
         ></Project>
       </section>
-      <section className="flex flex-col place-items-center justify-center bg-gradient-to-b from-slate-500 to-slate-500 pb-36 text-center">
-        <h1 className="animate-text bg-gradient-radial from-white to-slate-50 bg-clip-text pt-20 font-bebas text-8xl font-semibold text-transparent md:mt-0">
+      <section className="flex flex-col place-items-center justify-center bg-white pb-36 text-center">
+        <h1 className="animate-text bg-gradient-radial from-slate-500 to-slate-600 bg-clip-text pt-20 font-bebas text-8xl font-semibold text-transparent md:mt-0">
           Contact Me
         </h1>
-        <p className="mb-10 text-center font-bebas text-xl tracking-wide text-white">
-          See my various forms of contact below:
-        </p>
         <div className="mt-10 flex flex-col gap-12 gap-y-16 sm:flex-row">
           <button>
             <a
