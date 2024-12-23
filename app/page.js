@@ -22,7 +22,7 @@ export default function Home() {
     sectionOneSecondText:
       "I am an active member in my community as well as an experienced business professional. I am a licensed real estate agent, real estate assistant & real estate transaction coordinator. I also serve on the Board of Directors for South Shore Chorale, and previously served on the Board of Directors for United Way Fond du Lac.",
     sectionOneThirdText:
-      "I am seeking a full-time position as a Front End or Full Stack Web Developer. I believe my strong communication skills and professional experience would make a valuable asset to any team.",
+      "I am seeking a full-time position as a Front End or Full Stack Web Developer. Besides my technical expertise, I believe my strong communication skills and professional experience would make a valuable asset to any team.",
   };
 
   //title, description, image, deployment, github)
