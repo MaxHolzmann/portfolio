@@ -87,17 +87,17 @@ export default function Redesign() {
   return (
     <>
       <header className="flex h-screen flex-col justify-center bg-[url('/pattern.svg')] bg-cover bg-center bg-no-repeat text-center">
-        <div className="flex flex-col items-center justify-center  md:flex-row md:justify-around md:gap-10 md:pb-48 md:pt-0">
+        <div className="flex flex-col items-center justify-center  md:justify-around md:gap-10 md:pb-48 md:pt-0">
           <div>
-            <h1 className="m-10 animate-jump-in bg-gradient-radial from-white to-blue-300 bg-clip-text text-7xl font-bold text-transparent md:m-5 md:text-7xl lg:text-8xl">
+            <h1 className="m-10 animate-jump-in bg-gradient-radial text-7xl font-bold text-transparent text-white lg:mb-10 lg:pt-32 lg:text-8xl">
               Maximilian Holzmann
             </h1>
           </div>
 
-          <div className="mx-10 max-w-sm animate-jump-in rounded-lg border border-gray-200 bg-white p-2 shadow md:mt-20">
+          <div className="mx-10 flex max-w-xl animate-jump-in flex-col items-center rounded-lg border border-gray-200 bg-white p-2 shadow lg:max-w-2xl">
             <a href="#">
               <img
-                className="rounded-t-md"
+                className="max-w-sm rounded-t-md"
                 src="/profile-pic-white.png"
                 alt=""
               />
@@ -115,15 +115,17 @@ export default function Redesign() {
           </div>
         </div>
       </header>
+
+      <section className="">
+        <h1>3 Panel Section</h1>
+      </section>
+
+      {/* "bg-[#0055ff]" */}
       <section
         ref={aboutMeRef}
         className="mt-10 flex flex-col items-center justify-center"
       >
-        <h1
-          className={`m-10 bg-gradient-radial from-blue-500 to-blue-700 bg-clip-text text-7xl font-bold text-transparent md:m-5 md:text-7xl lg:text-8xl ${
-            isInView ? "animate-fade-right" : ""
-          }`}
-        >
+        <h1 className="m-10 bg-gradient-radial from-blue-500 to-blue-700 bg-clip-text p-10 text-7xl font-bold text-transparent md:m-5 md:text-7xl lg:text-8xl">
           Projects
         </h1>
         {/* replace with project carasol? ;o */}
