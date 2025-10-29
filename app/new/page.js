@@ -3,7 +3,14 @@ import { useRef, useEffect, useState } from "react";
 import Project from "../components/Project";
 import ProjectC from "../components/ProjectC";
 import "aos/dist/aos.css";
-import Carousel from "react-multi-carousel";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import { Card, CardContent } from "@/components/ui/card";
 import "react-multi-carousel/lib/styles.css";
 
 export default function Redesign() {
@@ -65,24 +72,6 @@ export default function Redesign() {
     github: "https://github.com/MaxHolzmann/real-estate-timeline-gen",
   };
 
-  const responsive = {
-    desktop: {
-      breakpoint: { max: 3000, min: 1024 },
-      items: 3,
-      slidesToSlide: 3, // optional, default to 1.
-    },
-    tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 2,
-      slidesToSlide: 2, // optional, default to 1.
-    },
-    mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 1,
-      slidesToSlide: 1, // optional, default to 1.
-    },
-  };
-
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -139,58 +128,27 @@ export default function Redesign() {
       <section className="">
         <h1>3 Panel Section</h1>
 
-        <Carousel
-          swipeable={false}
-          draggable={false}
-          showDots={true}
-          responsive={responsive}
-          ssr={true} // means to render carousel on server-side.
-          infinite={false}
-          autoPlaySpeed={1000}
-          keyBoardControl={true}
-          customTransition="all .5"
-          transitionDuration={500}
-          containerClass="carousel-container"
-          removeArrowOnDeviceType={["tablet", "mobile"]}
-          dotListClass="custom-dot-list-style"
-          itemClass="carousel-item-padding-40-px"
-        >
-          <ProjectC
-            title={projectGameLog.title}
-            description={projectGameLog.description}
-            image={projectGameLog.image}
-            deployment={projectGameLog.deployment}
-            github={projectGameLog.github}
-          ></ProjectC>
-          <ProjectC
-            title={projectHourLog.title}
-            description={projectHourLog.description}
-            image={projectHourLog.image}
-            deployment={projectHourLog.deployment}
-            github={projectBlueberries.github}
-          ></ProjectC>
-          <ProjectC
-            title={projectTimeline.title}
-            description={projectTimeline.description}
-            image={projectTimeline.image}
-            deployment={projectTimeline.deployment}
-            github={projectTimeline.github}
-          ></ProjectC>
-          <ProjectC
-            title={projectBlueberries.title}
-            description={projectBlueberries.description}
-            image={projectBlueberries.image}
-            deployment={projectBlueberries.deployment}
-            github={projectBlueberries.github}
-          ></ProjectC>
-          <ProjectC
-            title={projectMaxBlog.title}
-            description={projectMaxBlog.description}
-            image={projectMaxBlog.image}
-            deployment={projectMaxBlog.deployment}
-            github={projectMaxBlog.github}
-          ></ProjectC>
-        </Carousel>
+        <section className="flex justify-center text-center">
+          <Carousel className="max-w-sm md:max-w-3xl xl:max-w-6xl">
+            <CarouselContent>
+              {Array.from({ length: 5 }).map((_, index) => (
+                <CarouselItem className="md:basis-1/2 lg:basis-1/3" key={index}>
+                  <div className="p-1">
+                    <ProjectC
+                      title={projectMaxBlog.title}
+                      description={projectMaxBlog.description}
+                      image={projectMaxBlog.image}
+                      deployment={projectMaxBlog.deployment}
+                      github={projectMaxBlog.github}
+                    ></ProjectC>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel>
+        </section>
       </section>
 
       {/* "bg-[#0055ff]" */}
