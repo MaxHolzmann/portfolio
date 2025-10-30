@@ -73,30 +73,97 @@ export default function Newer() {
   return (
     <>
       <header>
-        <nav className="font-inter mx-auto mt-4 flex w-3/4 flex-col items-center justify-center rounded-xl bg-black px-2 py-6 text-2xl text-white drop-shadow-md">
-          <ul className="flex w-full justify-around gap-2">
+        <nav className="mx-auto mt-6 flex w-3/4 flex-col items-center justify-center rounded-full border border-gray-800/50 bg-gradient-to-r from-black via-gray-900 to-black p-4 text-2xl text-white shadow-lg shadow-black/20 backdrop-blur-sm">
+          <ul className="flex w-full items-center justify-around gap-3">
             <li>
-              <a href="/">Home</a>
+              <a
+                href="/ "
+                className="group relative overflow-hidden rounded-full px-5 py-3 text-white transition-all duration-300 hover:scale-110"
+              >
+                <span className="relative z-10 font-medium tracking-wide">
+                  Home
+                </span>
+                <span className="absolute inset-0 -z-0 scale-0 rounded-full bg-gradient-to-r from-orange-500 to-orange-400 transition-transform duration-300 ease-out group-hover:scale-100"></span>
+              </a>
             </li>
             <li>
-              <a href="/projects">Projects</a>
-            </li>
-            {/* LOGO OR NAME HERE */}
-            <li>
-              {/* fix this so that the padding doesn't impact the surrounding links*/}
-              <p className=" rounded-lg bg-orange-400 px-4 py-2 text-white">
-                Maximilian Holzmann
-              </p>
-            </li>
-            <li>
-              <a href="/resume">Resume</a>
+              <a
+                href="/projects"
+                className="group relative overflow-hidden rounded-full px-5 py-3 text-white transition-all duration-300 hover:scale-110"
+              >
+                <span className="relative z-10 font-medium tracking-wide">
+                  Projects
+                </span>
+                <span className="absolute inset-0 -z-0 scale-0 rounded-full bg-gradient-to-r from-orange-500 to-orange-400 transition-transform duration-300 ease-out group-hover:scale-100"></span>
+              </a>
             </li>
             <li>
-              <a href="/contact">Contact</a>
+              <div className="relative">
+                <div className="absolute -inset-1 rounded-full bg-gradient-to-r from-orange-500 via-orange-400 to-orange-500 opacity-75 blur-sm"></div>
+                <p className="relative rounded-full bg-gradient-to-br from-orange-500 to-orange-600 px-5 py-3 font-bold text-white shadow-lg ring-2 ring-orange-400/50">
+                  MH
+                </p>
+              </div>
+            </li>
+            <li>
+              <a
+                href="/resume"
+                className="group relative overflow-hidden rounded-full px-5 py-3 text-white transition-all duration-300 hover:scale-110"
+              >
+                <span className="relative z-10 font-medium tracking-wide">
+                  Resume
+                </span>
+                <span className="absolute inset-0 -z-0 scale-0 rounded-full bg-gradient-to-r from-orange-500 to-orange-400 transition-transform duration-300 ease-out group-hover:scale-100"></span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="/contact"
+                className="group relative overflow-hidden rounded-full px-5 py-3 text-white transition-all duration-300 hover:scale-110"
+              >
+                <span className="relative z-10 font-medium tracking-wide">
+                  Contact
+                </span>
+                <span className="absolute inset-0 -z-0 scale-0 rounded-full bg-gradient-to-r from-orange-500 to-orange-400 transition-transform duration-300 ease-out group-hover:scale-100"></span>
+              </a>
             </li>
           </ul>
         </nav>
       </header>
+      <main>
+        <section className="mt-20 flex flex-col items-center justify-center px-8">
+          <div className="mb-8 flex items-center justify-center">
+            <h1 className="font-sans text-5xl font-light tracking-wide text-gray-800">
+              Hello! I'm
+            </h1>
+          </div>
+          <div className="flex items-center justify-center gap-12">
+            <div className="group relative">
+              <img
+                src="/max3_real.png"
+                alt="Maximilian Holzmann"
+                className="relative max-w-md  transition-transform duration-500 group-hover:scale-105 sm:mb-5 sm:max-w-md"
+              />
+            </div>
+            <div className="flex flex-col gap-2">
+              <h1 className="font-sans bg-gradient-to-r from-orange-500 via-orange-400 to-orange-600 bg-clip-text text-7xl font-bold tracking-tight text-transparent">
+                Maximilian
+              </h1>
+              <h1 className="font-sans bg-gradient-to-r from-orange-500 via-orange-400 to-orange-600 bg-clip-text text-7xl font-bold tracking-tight text-transparent">
+                Holzmann
+              </h1>
+              <div className="mt-4 h-1 w-full rounded-full bg-gradient-to-r from-orange-500 to-orange-400"></div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <section>
+        <div className="flex flex-col items-center justify-center">
+          <h1 className="font-sans text-5xl font-light tracking-wide text-gray-800">
+            About Me
+          </h1>
+        </div>
+      </section>
     </>
   );
 }
